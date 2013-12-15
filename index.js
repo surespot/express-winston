@@ -153,6 +153,7 @@ function logger(options) {
 
               meta.req = filterObject(req, requestWhitelist, options.requestFilter);
               meta.res = filterObject(res, responseWhitelist, options.responseFilter);
+              meta.pid = process.pid;
 
               bodyWhitelist = req._routeWhitelists.body || [];
 
